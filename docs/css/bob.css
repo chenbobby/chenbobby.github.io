@@ -12,17 +12,22 @@ a { text-decoration: none }
 a:hover, a:focus { text-decoration: underline }
 
 aside,
-main,
-article {
+article,
+main {
   background-color: #FFF;
   border: 1px solid #FFF;
   border-radius: 3px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  height: fit-content;
   margin: 5px;
-  padding: 0 12px;
+  padding: 0 16px;
 }
 
-aside p { color: #44403C }
+aside p {
+  color: #44403C;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 
 .avatar {
   display: flex;
@@ -44,6 +49,56 @@ aside p { color: #44403C }
   line-height: 1.75rem;
 }
 
+.essay-preview p {
+  margin: 0;
+  color: #78716C;
+}
+
+.essay-preview a {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+article {
+  padding-top: 16px;
+}
+
+article .back {
+  margin-bottom: 16px;
+}
+
+article time {
+  color: #78716C;
+}
+
+article h1 {
+  margin: 0;
+}
+
+article h2 {
+  margin: 3px 0 32px;
+}
+
+article p {
+  max-width: 670px;
+}
+
+article h2 {
+  color: #44403C;
+  font-weight: normal;
+  font-size: 0.875rem;
+  font-style: italic;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+
 @media (min-width: 1024px) {
   .x {
     width: 1024px;
@@ -56,9 +111,10 @@ aside p { color: #44403C }
     order: 1;
   }
 
-  main,
-  article {
+  article,
+  main {
     flex: 1;
+    padding-left: 48px;
+    padding-right: 48px;
   }
 }
-
