@@ -29,6 +29,11 @@ aside p {
   line-height: 1.25rem;
 }
 
+aside p label {
+  display: inline-block;
+  width: 56px;
+}
+
 .avatar {
   display: flex;
   align-items: center;
