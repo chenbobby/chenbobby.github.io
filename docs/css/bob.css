@@ -23,13 +23,15 @@ main {
   padding: 0 16px;
 }
 
-aside p {
+aside,
+article .closer {
   color: #44403C;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
-aside p label {
+aside p label,
+article .closer p label {
   display: inline-block;
   width: 56px;
 }
@@ -96,6 +98,20 @@ article h2 {
   line-height: 1.25rem;
 }
 
+article figure { margin: 0 }
+
+article figure img { width: 100% }
+
+article figure figcaption {
+  color: #44403C;
+  font-size: 0.875rem;
+  font-style: italic;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+article .closer { margin: 52px 0 32px; }
+
 @media (min-width: 640px) {
   body {
     font-size: 1rem;
@@ -121,5 +137,9 @@ article h2 {
     flex: 1;
     padding-left: 48px;
     padding-right: 48px;
+  }
+
+  article .closer {
+    padding: 0 32px;
   }
 }
