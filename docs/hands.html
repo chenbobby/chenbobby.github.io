@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bob recently wrote...</title>
-    <link rel="canonical" href="/hands/"></link>
+    <link rel="canonical" href="/hands"></link>
     <link rel="stylesheet" href="/css/bob.css"></link>
   </head>
   <body>
@@ -14,28 +14,31 @@
           <img src="/images/plant.svg" alt="a plant">
           <span>Bob Chen</span>
         </div>
-        <p>He crashes software, writes essays, knits scarves, and eats hot pot. In that order.</p>
+        <p>I crash software, write essays, knit scarves, and eat hot pot. In that order.</p>
         <p><label>Email:</label>me (at) bobchen (dot) io</p>
         <p><label>Twitter:</label><a href="https://twitter.com/bobchen168">@bobchen168</a></p>
         <p><label>GitHub:</label><a href="https://github.com/chenbobby">@chenbobby</a></p>
       </aside>
       <article>
         <div class="back">
-          <a href="/">see all of Bob's essays</a>
+          <a href="/">see all articles</a>
         </div>
         <time datetime="2020-12-20">2020-12-20</time>
         <h1>Hands: a thoughtful static site generator</h1>
         <h2>and written in Rust (just kidding)</h2>
         <p>
-          It's launch day, baby! This essay marks the first third time that Bob has launched his blog.
+          It's launch day, baby! This essay marks the first third time that I've launched my blog.
         </p>  
         <p>
-          Instead of using a tool like Wordpress, Jekyll, or Medium, all the HTML and CSS on this website is written by hand (no JavaScript). For any aspiring writer who is at least somewhat technical, this essay describes the benefits of working this way and explains how you can get started. Even if you have decades of experience in web development, constraining yourself to handwrite HTML and CSS will help you focus on improving your writing.
+          This time, instead of using a tool like Wordpress, Jekyll, or Medium, all the HTML and CSS on this website is written by hand (no JavaScript). For any aspiring writer who is at least somewhat technical, this essay describes the benefits of working this way and explains how you can get started. Even if you have decades of experience in web development, constraining yourself will help you focus on writing content for your blog.
         </p>
         <h3>Why write a website by hand?</h3>
         <h4>Performance</h4>
         <p>
-          HTML has become the assembly language of websites. There are many static site generators that can automate your blogging process and optimize your website for the modern web, but add bloat to simple use cases. If you ever want to run your website on an embedded device with low power and high performance, then you should write your HTML by hand. The right tool for the job, or whatever.
+          HTML has become the assembly language of websites. There are many static site generators that can automate your blogging process and optimize your website for the modern web, but add bloat to simple use cases. If all you need is a lightweight website with text on the page, then writing HTML by hand is the way to go.
+        </p>
+        <p>
+          The total size of this webpage is &#60;300kB (<b>&#60;10kB</b> if you exclude images), and it loads fast on slow networks and devices. That makes for a much better reader experience.
         </p>
         <h4>Education</h4>
         <p>
@@ -47,16 +50,42 @@
         </figure>
         <h4>Focus</h4>
         <p>
-          Tinkering with new features is the downfall of software engineers who try to start their own blogs. Your technical curiosity will distract you from the core process of writing content. Without constraints, you fall into the trap of ending each day by adding 120kB to your website without a single new paragraph. Not good.
+          Tinkering with new features is the downfall of software engineers who try to start their own blogs. Your technical curiosity will distract you from the core process of writing content. Without constraints, you fall into the trap of ending each day by adding 100kB to your website without a single new paragraph. Not good.
         </p>
         <p>
-          You should know that writing is a creative endeavour, and constraints are good for creativity. By limiting the surface area of what you are allowed to work on, you force yourself to focus on generating ideas and actually write. The writing process is difficult and, like anything else, it takes intentional practice to see improvement. Luckily, it can be made easier if you add constraints to how fancy your website is.
+          You should know that writing is a creative endeavour, and <em>constraints are good for creativity</em>. By limiting the surface area of what you are allowed to work on, you force yourself to focus on generating ideas and actually writing. Like any skill, writing is difficult and takes intentional practice to see improvement. Luckily, it can be made easier if you add constraints to how fancy your website is.
         </p>
         <p>
-          At first, it will be painful. There's so much pre-work to do, such as SEO, asset optimization, analytics, and automation. You may ask, "how do we know if we're engaging our audience?" Well, to be frank, you won't and you shouldn't. The goal is to start writing and finish something. And then start writing a second thing and finish that one too. The whole point is to improve your language skills, not your programming skills.
+          At first, it will be painful. There's so much pre-work to do, such as SEO, asset optimization, analytics, and automation. You may ask, "how do we know if I'm engaging our audience?" Well, to be frank, you won't and you shouldn't. The goal is to start writing and finish something. And then start writing a second thing and finish that one too. The whole point is to improve your writing skills, not your programming skills.
+        </p>
+        <p>
+          As I was writing this blog, I often thought, "Hmm. I could add XYZ features...". But since I'm constraining myself to writing everything by hand, those features would take a long time to implement and I would just give up. <em>This is a good thing</em>, because I go back to writing articles. Hooray for constraints!
+        </p>
+        <h3>Why NOT write a website by hand?</h3>
+        <p>
+          Writing a website by hand may be time-consuming for someone who is inexperienced with programming. Learning is a rewarding experience, but if you have short-term deadlines for publishing your writing, then using a hosted blogging platform may be more appropriate.
+        </p>
+        <p>
+          I would also distinguish web apps, which have more features and interactivity than a blog website. For example, <a href="https://instagram.com/">Instagram.com</a>, <a href="https://netflix.com/">Netflix.com</a>, and <a href="https://alibaba.com/">Alibaba.com</a> are what I would consider web apps where you would <em>not</em> want to write all the HTML, CSS, and JavaScript by hand, even though they technically are all websites.
+        </p>
+        <p>
+          For my readers who are physically disabled and unable to use their hands to type on a keyboard or whatnot, you may also choose not to write a website by hand. Fortunately, there are speech-to-text and other accessibility software tools that can help you achieve the same end result as writing websites by hand.
+        </p>
+        <p>
+          Lastly, an alternative to writing a website by hand is to do nothing. Don't publish your blog on the internet at all. There are many writers who keep their work to themselves, because they are focused on <em>content creation</em> and not <em>content distribution</em>. At a high level, this is the difference between writing and publishing.
+        </p>
+        <h3>Further Reading</h3>
+        <p>
+          If you want to improve your writing skills and publish your work on the internet with a hand-written website, then I wish you good luck on your journey.
+        </p>
+        <p>
+          If you are a complete beginner to web development, you should check out <a href="https://learn.shayhowe.com/html-css/building-your-first-web-page/">Shay Howe's tutorial</a> on building your first website. This tutorial covers the fundamentals of HTML as well as how to add styling with CSS.
+        </p>
+        <p>
+          As with learning anything, Google is your friend. If you are looking for reference manuals, <a href="https://www.w3schools.com/tags/default.asp">W3C Schools</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference">MDN Web Docs</a> are reliable and information dense.
         </p>
         <div class="closer">
-          <p>If you want to ask a question or chat, you're invited to reach out via email or Twitter:</p>
+          <p>Thanks for reading. If you want to ask a question or chat, send me an email or DM me on Twitter:</p>
           <p><label>Email:</label>me (at) bobchen (dot) io</p>
           <p><label>Twitter:</label><a href="https://twitter.com/bobchen168">@bobchen168</a></p>
         </div>
