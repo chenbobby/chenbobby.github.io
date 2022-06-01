@@ -8,3 +8,4 @@ title = "ChenBobby.com"
 [output.html]
 curly-quotes = true
 additional-css = ["static/css/custom.css"]
+cname = "chenbobby.com"
