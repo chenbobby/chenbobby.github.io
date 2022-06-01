@@ -1,0 +1,33 @@
+.work-exp--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.work-exp--header--org {
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+
+.work-exp--header--org--logo {
+  height: 36px;
+  width: 36px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.work-exp--header--org--name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.work-exp--header--dates {
+  font-size: 16px;
+}
+
+.work-exp--description {
+  font-size: 16px;
+  padding-inline-start: 18px;
+}
