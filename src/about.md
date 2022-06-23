@@ -4,15 +4,16 @@
 
 Hello! 你好！
 
-I blog about software development. __[Take a look at my blog](/blog)__.
+I blog about software development. I like compilers, networking, and databases. I dislike pasta and cilantro.
 
-I am currently working on a static site generator for personal websites and blogs.
+__[Take a look at my blog](/blog)__.
 
 <br/>
 
 |              |                                                                  |
 |--------------|------------------------------------------------------------------|
-| __GitHub__   | __[@chenbobby](https://github.com/chenbobby)__         |
+| __GitHub__   | __[@chenbobby](https://github.com/chenbobby)__                   |
+| __Twitter__  | __[@chenbobby168](https://twitter.com/chenbobby168)__            |
 | __LinkedIn__ | __[/in/chenbobby168](https://www.linkedin.com/in/chenbobby168)__ |
 
 <br/>
