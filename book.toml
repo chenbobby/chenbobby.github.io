@@ -9,3 +9,6 @@ title = "ChenBobby.com"
 curly-quotes = true
 additional-css = ["static/css/custom.css"]
 cname = "chenbobby.com"
+
+[output.html.playground]
+runnable = false
