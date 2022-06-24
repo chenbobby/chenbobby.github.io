@@ -4,7 +4,9 @@
 
 Hello! 你好！
 
-I blog about software development. I like compilers, networking, and databases. I dislike pasta and cilantro.
+Welcome to my website, where you can learn about me and read my blog.
+I am currently writing a book on performance engineering.
+The book's content will be based on the curriculum of MIT 6.172 and Jon Bentley's "Writing efficient programs" (1982).
 
 __[Take a look at my blog](/blog)__.
 
@@ -12,6 +14,7 @@ __[Take a look at my blog](/blog)__.
 
 |              |                                                                  |
 |--------------|------------------------------------------------------------------|
+| __Email__    | __[chenbobby@fastmail.com](mailto:chenbobby@fastmail.com)__      |
 | __GitHub__   | __[@chenbobby](https://github.com/chenbobby)__                   |
 | __Twitter__  | __[@chenbobby168](https://twitter.com/chenbobby168)__            |
 | __LinkedIn__ | __[/in/chenbobby168](https://www.linkedin.com/in/chenbobby168)__ |
