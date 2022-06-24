@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>About - ChenBobby.com</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="static/css/custom.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="about.html">About</a></li><li class="chapter-item expanded affix "><a href="blog/index.html">Blog</a></li><li class="chapter-item expanded affix "><a href="blog/dont-worry-about-performance.html">2022-06-23 - When learning Rust, don't worry about performance.</a></li><li class="chapter-item expanded affix "><a href="blog/mutable-references-vs-mutable-values.html">2022-06-11 - Mutable References vs. Mutable Values</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ChenBobby.com</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <img src="images/chenbobby.jpg" style="border-radius: 100%; width: 200px">
+<h1 id="bobby-chen"><a class="header" href="#bobby-chen">Bobby Chen</a></h1>
+<p>Hello! 你好！</p>
+<p>Welcome to my website, where you can learn about me and read my blog.
+I am currently writing a book on performance engineering.
+The book’s content will be based on the curriculum of MIT 6.172 and Jon Bentley’s “Writing efficient programs” (1982).</p>
+<p><strong><a href="/blog">Take a look at my blog</a></strong>.</p>
+<br/>
+<table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td><strong>Email</strong></td><td><strong><a href="mailto:chenbobby@fastmail.com">chenbobby@fastmail.com</a></strong></td></tr>
+<tr><td><strong>GitHub</strong></td><td><strong><a href="https://github.com/chenbobby">@chenbobby</a></strong></td></tr>
+<tr><td><strong>Twitter</strong></td><td><strong><a href="https://twitter.com/chenbobby168">@chenbobby168</a></strong></td></tr>
+<tr><td><strong>LinkedIn</strong></td><td><strong><a href="https://www.linkedin.com/in/chenbobby168">/in/chenbobby168</a></strong></td></tr>
+</tbody></table>
+<br/>
+<hr />
+<h1 id="resumé"><a class="header" href="#resumé">Resumé</a></h1>
+<h2 id="education"><a class="header" href="#education">Education</a></h2>
+<div>
+    <div class="work-exp--header">
+        <div class="work-exp--header--org">
+            <img class="work-exp--header--org--logo" src="/images/harvard_logo.png" alt="Harvard Logo">
+            <span class="work-exp--header--org--name">
+                <a href="https://www.harvard.edu">
+                    Harvard University
+                </a>
+            </span>
+        </div>
+        <span class="work-exp--header--dates">
+            August 2017 - May 2022
+        </span>
+    </div>
+    <p class="work-exp--role">
+        <b>B.A. in Applied Mathematics and Computer Science</b>
+    </p>
+    <p class="work-exp--role">
+        <b>Language Citation in Chinese (Mandarin)</b>
+    </p>
+</div>
+<h2 id="work-experience"><a class="header" href="#work-experience">Work Experience</a></h2>
+<div>
+    <div class="work-exp--header">
+        <div class="work-exp--header--org">
+            <img class="work-exp--header--org--logo" src="/images/airbnb_logo.jpg" alt="Airbnb Logo">
+            <span class="work-exp--header--org--name">
+                <a href="https://careers.airbnb.com">
+                    Airbnb
+                </a>
+            </span>
+        </div>
+        <span class="work-exp--header--dates">
+            May 2021 - August 2021
+        </span>
+    </div>
+    <p class="work-exp--role">
+        <b><em>Software Engineering Intern</em></b>, Compliance and Financial Crimes
+    </p>
+</div>
+<ul>
+<li><strong>Designed and built a React app</strong> for Compliance and Financial Crimes auditors.</li>
+<li><strong>Migrated a deprecated Ruby service</strong> to a new Kotin job runner.</li>
+<li>Used <a href="https://www.ruby-lang.org">Ruby</a>, <a href="https://kotlinlang.org/">Kotlin</a>, <a href="https://www.typescriptlang.org/">TypeScript</a>, and <a href="https://reactjs.org/">ReactJS</a>.</li>
+</ul>
+<br/>
+<br/>
+<div>
+    <div class="work-exp--header">
+        <div class="work-exp--header--org">
+            <img class="work-exp--header--org--logo" src="/images/elementl_logo.png" alt="Elementl Logo">
+            <span class="work-exp--header--org--name">
+                <a href="https://elementl.com/">
+                    Elementl
+                </a>
+            </span>
+        </div>
+        <span class="work-exp--header--dates">
+            September 2020 - March 2021
+        </span>
+    </div>
+    <p class="work-exp--role">
+        <b><em>Software Engineering Fellow</em></b>, Dagster
+    </p>
+</div>
+<ul>
+<li>Supported corporate partners with <strong>Apache Spark integrations with Dagster</strong>.</li>
+<li>Researched user needs by conducting <strong>user interviews with 15+ companies</strong>, including Apple, Carvana, and Thinking Machines.</li>
+<li>Extended the <strong>dagster-dbt integration library</strong> and co-authored a <a href="https://dagster.io/blog/dagster-dbt">marketing blog post</a>.</li>
+<li>Maintained development and production <strong>deployments on Google Cloud Platform</strong> for internal use by the company.</li>
+<li>Used SQL, <a href="https://www.python.org/">Python</a>, <a href="https://www.getdbt.com/">dbt</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, <a href="https://helm.sh/">Helm</a>, <a href="https://aws.amazon.com/">Amazon Web Services</a>, and <a href="https://cloud.google.com/">Google Cloud Platform</a>.</li>
+</ul>
+<br/>
+<br/>
+<div>
+    <div class="work-exp--header">
+        <div class="work-exp--header--org">
+            <img class="work-exp--header--org--logo" src="/images/intel_logo.jpg" alt="Intel Logo">
+            <span class="work-exp--header--org--name">
+                <a href="https://www.intel.com/content/www/us/en/jobs/jobs-at-intel.html">
+                    Intel
+                </a>
+            </span>
+        </div>
+        <span class="work-exp--header--dates">
+            June 2020 - August 2020
+        </span>
+    </div>
+    <p class="work-exp--role">
+        <b><em>Technical Marketing Intern</em></b>, Hardware Plugins for Kubernetes
+    </p>
+</div>
+<ul>
+<li>Designed a marketing demo to <strong>showcase 5x Redis performance improvement</strong> (operations per second) when using <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/optane-dc-persistent-memory.html">Intel Optane Persistent Memory</a> with Kubernetes.</li>
+<li><strong>Wrote documentation and technical copy</strong> for Intel hardware plugins for Kubernetes.</li>
+<li><strong>Hosted Intel’s conference booth</strong> at <a href="https://events.linuxfoundation.org/archive/2020/kubecon-cloudnativecon-europe/">KubeCon Europe 2020</a>.</li>
+<li>Used <a href="https://redis.io/">Redis</a>, <a href="https://kubernetes.io/">Kubernetes</a>, HTML, CSS, and JavaScript.</li>
+</ul>
+<br/>
+<br/>
+<div>
+    <div class="work-exp--header">
+        <div class="work-exp--header--org">
+            <img class="work-exp--header--org--logo" src="/images/datacamp_logo.png" alt="DataCamp Logo">
+            <span class="work-exp--header--org--name">
+                <a href="https://www.datacamp.com/jobs">
+                    DataCamp
+                </a>
+            </span>
+        </div>
+        <span class="work-exp--header--dates">
+            May 2018 - July 2018
+        </span>
+    </div>
+    <p class="work-exp--role">
+        <b><em>Software Engineering Intern</em></b>, Full-Stack Web Development
+    </p>
+</div>
+<ul>
+<li><strong>Decreased query time for course search from 6 seconds to 1 second</strong>, by migrating a naive SQL query to use Algolia’s Indexing and Search API.</li>
+<li><strong>Reduced JavaScript bundle size by 15%</strong>, increasing the web app’s rendering speed.</li>
+<li><strong>Added privacy controls for GDPR compliance</strong> on user data.</li>
+<li>Used <a href="https://rubyonrails.org/">Ruby on Rails</a>, <a href="https://www.algolia.com/doc/">Algolia API</a>, HTML, CSS, and JavaScript.</li>
+</ul>
+<br/>
+<br/>
+<div>
+    <div class="work-exp--header">
+        <div class="work-exp--header--org">
+            <img class="work-exp--header--org--logo" src="/images/hpair_logo.png" alt="HPAIR Logo">
+            <span class="work-exp--header--org--name">
+                <a href="https://hpair.org/">
+                    HPAIR
+                </a>
+            </span>
+        </div>
+        <span class="work-exp--header--dates">
+            September 2017 - August 2020
+        </span>
+    </div>
+    <p class="work-exp--role">
+        <b><em>Director of Technology</em></b>
+    </p>
+</div>
+<ul>
+<li>Implemented Django REST API endpoints for the conference mobile app, used by <strong>500+ delegates</strong> during the 5 days of conference events.</li>
+<li>Developed a custom application portal, used by <strong>1000+ monthly applicants from 70+ countries</strong>.</li>
+<li><strong>Built an analytics dashboard</strong> for applicant demographics and attendee engagement.</li>
+<li>Designed admin views for non-technical colleagues to independently control website content, allowing the Technology Team to focus on new projects and technical features.</li>
+<li>Used <a href="https://www.python.org/">Python</a>, <a href="https://www.djangoproject.com/">Django</a>, <a href="https://www.postgresql.org/">PostgreSQL</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>, and <a href="https://cloud.google.com/">Google Cloud Platform</a>.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="next" href="blog/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="next" href="blog/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
